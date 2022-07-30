@@ -25,6 +25,17 @@ header .menu{
 header .logo{
 	font-size: 26px;
 	float:left;
+	color: black;
+	animation: italic1 4s linear infinite;
+}
+@keyframes italic1 {
+	0% {
+		font-style: normal;
+	}
+	50%{
+		font-style: italic;
+	}
+
 }
 
 header .datetime{
@@ -33,7 +44,19 @@ header .datetime{
 	margin-top: 0px;
 	text-align: right;
 }
-
+.datetime p {
+	margin-top: 5px;
+	overflow: hidden;
+	animation: animate 2s linear infinite;
+}
+@keyframes animate {
+	0%,100% {
+		opacity: 100;
+	}
+	50% {
+		opacity: 0;
+	}
+}
 header .title{
 	clear: both;
 	text-align: center;
@@ -72,6 +95,34 @@ header .title{
 .teams-heading h2 {
 	font-weight: normal;
 }
+.dot
+{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+}
+.dot1
+{
+    background-color: #1abc9c;
+    animation: jump-up 0.6s 0.1s linear infinite;
+}
+.dot2
+{
+    background-color: #ffd64a;
+    animation: jump-up 0.6s 0.2s linear infinite;
+}
+.dot3
+{
+    background-color: #e067af;
+    animation: jump-up 0.6s 0.3s linear infinite;
+}
+@keyframes jump-up
+{
+    50% {
+        transform: translate(0, 15px);
+    }
+}
 .teams {
 	display: flex;
 	justify-content: center;
@@ -100,6 +151,8 @@ header .title{
 }
 .team-icon:hover img {
 	opacity: 0.3;
+	transform: scale(1.2);
+
 }
 .team-icon p {
 	opacity: 0;
@@ -113,7 +166,7 @@ header .title{
 }	
 .team-icon:hover p {
 	opacity: 1;
-	transform: translateY(0);	
+	transform: translateY(0);
 }
 
 /* ----- END TEAMS ----- */
