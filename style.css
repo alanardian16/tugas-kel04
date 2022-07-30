@@ -77,6 +77,8 @@ header .title{
 	margin-right: 100px;
 	margin-top: 30px;
 }
+/* ----- END HEADER ----- */
+
 
 .image-container {
 	background-color: white;
@@ -219,3 +221,21 @@ header .title{
 	}
 }
 /* ----- END RESPONSIVE ----- */
+
+
+/* START FOOTER */
+.footer p {
+	color: white;
+	font-size: 12px;
+	padding: 25px 100px;
+	background-color: #25a862;
+}
+  
+.footer {
+	padding-top: 30px;
+}
+@media all and (max-width: 670px) {
+    .footer {
+        text-align: center;
+    }
+}
