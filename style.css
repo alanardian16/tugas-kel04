@@ -3,6 +3,11 @@ body{
 	padding:0px;
 	font-family: Arial;
 }
+
+.clear {
+	clear: left;
+}
+
 /* ----- HEADER ----- */
 header{
 	position: relative;
@@ -20,6 +25,17 @@ header .menu{
 header .logo{
 	font-size: 26px;
 	float:left;
+	color: black;
+	animation: italic1 4s linear infinite;
+}
+@keyframes italic1 {
+	0% {
+		font-style: normal;
+	}
+	50%{
+		font-style: italic;
+	}
+
 }
 
 header .datetime{
@@ -28,7 +44,19 @@ header .datetime{
 	margin-top: 0px;
 	text-align: right;
 }
-
+.datetime p {
+	margin-top: 5px;
+	overflow: hidden;
+	animation: animate 2s linear infinite;
+}
+@keyframes animate {
+	0%,100% {
+		opacity: 100;
+	}
+	50% {
+		opacity: 0;
+	}
+}
 header .title{
 	clear: both;
 	text-align: center;
@@ -50,6 +78,150 @@ header .title{
 	margin-top: 30px;
 }
 /* ----- END HEADER ----- */
+
+
+.image-container {
+	background-color: white;
+	width: 600px;
+	height: 600px;
+	z-index: 8;
+	position: relative;
+}
+.image-container img {
+	width: 60%;
+	height: 60%;
+}
+.image-first {
+	left: 150px;
+	position: relative;
+	top: 100px;
+}
+.image-transition {
+	position: absolute;
+	top: 100px;
+	left: 150px;
+	opacity: 0;
+	animation: transition linear infinite;
+	animation-duration: 20s;
+	animation-delay: 5s;
+}
+@keyframes transition {
+	20%,60% {
+		opacity: 1;
+}
+	70%,100% {
+		opacity: 0;
+}
+}
+/* ----- END HEADER ----- */
+
+/* ----- TEAMS ----- */
+.teams-wrapper {	
+	padding-bottom: 80px;
+	padding-left: 5%;
+	padding-right: 5%;
+	background-color: #f7f7f7;
+	text-align: center;
+}
+.teams-heading {
+	padding-top: 80px;
+	padding-bottom: 50px;
+	color: #5f5d60;
+}  
+.teams-heading h2 {
+	font-weight: normal;
+}
+.dot
+{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+}
+.dot1
+{
+    background-color: #1abc9c;
+    animation: jump-up 0.6s 0.1s linear infinite;
+}
+.dot2
+{
+    background-color: #ffd64a;
+    animation: jump-up 0.6s 0.2s linear infinite;
+}
+.dot3
+{
+    background-color: #e067af;
+    animation: jump-up 0.6s 0.3s linear infinite;
+}
+@keyframes jump-up
+{
+    50% {
+        transform: translate(0, 15px);
+    }
+}
+.teams {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.team {
+	float: left;
+	width: 20%;
+}
+.team-icon {		
+	display: block;
+	position: relative;	
+}
+.team-icon img {
+	opacity: 1;
+	transition: opacity 0.5s;
+  	backface-visibility: hidden;	
+	width: 150px;
+	border-radius: 160px;
+	-webkit-border-radius: 160px;
+	-moz-border-radius: 160px;
+	-ms-border-radius: 160px;
+	-o-border-radius: 160px;
+	box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.team-icon:hover img {
+	opacity: 0.3;
+	transform: scale(1.2);
+
+}
+.team-icon p {
+	opacity: 0;
+	position: absolute;
+	top: 60%;
+	width: 100%;
+	color: rgb(34, 32, 32);
+	font-weight: bold;
+	transform: translateY(20px);
+	transition: transform 0.5s;
+}	
+.team-icon:hover p {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* ----- END TEAMS ----- */
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 1000px) {
+	.team {
+		width: 50%;
+		margin-bottom: 50px;
+	}
+}
+
+@media (max-width: 670px) {
+	.team {
+	  width: 100%;
+	}
+}
+/* ----- END RESPONSIVE ----- */
+
 
 /* START FOOTER */
 .footer p {
