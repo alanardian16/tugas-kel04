@@ -50,3 +50,16 @@ header .title{
 	margin-top: 30px;
 }
 /* ----- END HEADER ----- */
+
+/* START FOOTER */
+.footer p {
+	color: white;
+	font-size: 12px;
+	padding: 25px 100px;
+	background-color: #25a862;
+}
+  
+.footer {
+	padding-top: 30px;
+	border: 2px solid #fff;
+}
