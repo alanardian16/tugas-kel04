@@ -72,12 +72,6 @@ header .title{
 	left: 0;
 }
 
-.main{
-	margin-left: 100px;
-	margin-right: 100px;
-	margin-top: 30px;
-}
-
 @media (max-width: 670px) {
 	header .menu {
 		padding: 25px 40px;
@@ -103,27 +97,38 @@ header .title{
 
 /* ----- END HEADER ----- */
 
+/* ----- END HEADER ----- */
+
+
+/*----- Main ----- */
+
+.main{
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 30px;
+}
 
 .image-container {
 	background-color: white;
-	width: 600px;
-	height: 600px;
+	width: 45%;
+	float: left;
 	z-index: 8;
 	position: relative;
 }
 .image-container img {
-	width: 60%;
-	height: 60%;
+	width: 80%;
 }
 .image-first {
-	left: 150px;
 	position: relative;
-	top: 100px;
+	opacity: 1;
+	animation: transition1 linear infinite;
+	animation-duration: 20s;
+	animation-delay: 5s;
 }
 .image-transition {
 	position: absolute;
-	top: 100px;
-	left: 150px;
+	top:100px;
+	left:0px;
 	opacity: 0;
 	animation: transition linear infinite;
 	animation-duration: 20s;
@@ -132,12 +137,105 @@ header .title{
 @keyframes transition {
 	20%,60% {
 		opacity: 1;
-}
+	}
 	70%,100% {
 		opacity: 0;
+	}
 }
+@keyframes transition1 {
+	20%,60% {
+		opacity: 0;
+	}
+	70%,100% {
+		opacity: 1;
+	}
 }
-/* ----- END HEADER ----- */
+label{
+	display: block;
+}
+
+.form-input{
+	display: block;
+	width: 100%;
+	height: 10px;
+	padding: 15px;
+	border-radius: 3px;
+	border:1px solid gray;
+	outline: 0px;
+	margin-top:5px;
+	margin-bottom:10px;
+	width: 95%;
+	box-shadow: 0px 0px 10px -4px rgba(0,0,0,0.4) inset;
+	transform: 0.2s all ease-out;
+}
+
+.form-input:focus{
+	box-shadow: 0px 0px 13px -4px rgba(49,77,61,0.9);
+}
+
+
+.form{
+	width: 55%;
+	float: left;
+	margin-bottom: 50px;
+}
+
+.btn{
+  padding: 12px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  border: 0px;
+  cursor: pointer;
+
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.btn-submit {
+  background-color: #5dca88;
+  box-shadow: 0 7px #1a7940;
+}
+
+.btn-submit:active{
+  box-shadow:none;
+  position:relative;
+  top:7px;
+}
+
+.btn-reset {
+  background-color: #e74c3c;
+  box-shadow: 0 7px #c0392b;
+}
+
+.btn-reset:active{
+  box-shadow:none;
+  position:relative;
+  top:7px;
+}
+
+
+@media (max-width: 850px) {
+	.image-container img{
+		width: 100%;
+	}
+}
+
+@media (max-width: 650px) {
+	.image-container img{
+		display: none;
+	}
+
+	.image-transition, .form{
+		width: 100%;
+	}
+
+}
+
+/*-----end body------*/
 
 /* ----- TEAMS ----- */
 .teams-wrapper {	
@@ -146,6 +244,7 @@ header .title{
 	padding-right: 5%;
 	background-color: #f7f7f7;
 	text-align: center;
+	clear: both;
 }
 .teams-heading {
 	padding-top: 80px;
