@@ -77,6 +77,30 @@ header .title{
 	margin-right: 100px;
 	margin-top: 30px;
 }
+
+@media (max-width: 670px) {
+	header .menu {
+		padding: 25px 40px;
+	}
+}
+
+@media (max-width: 415px) {
+	header .menu {
+		padding: 10px 40px;
+		height: 60px;
+	}
+	header .logo{
+		float: none;
+		text-align: center;
+	}
+	header .datetime{
+		float: none;
+		text-align: center;
+		font-size: 12px;
+		line-height: 10px;
+	}
+}
+
 /* ----- END HEADER ----- */
 
 
