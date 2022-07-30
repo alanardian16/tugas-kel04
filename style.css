@@ -77,6 +77,40 @@ header .title{
 	margin-right: 100px;
 	margin-top: 30px;
 }
+
+.image-container {
+	background-color: white;
+	width: 600px;
+	height: 600px;
+	z-index: 8;
+	position: relative;
+}
+.image-container img {
+	width: 60%;
+	height: 60%;
+}
+.image-first {
+	left: 150px;
+	position: relative;
+	top: 100px;
+}
+.image-transition {
+	position: absolute;
+	top: 100px;
+	left: 150px;
+	opacity: 0;
+	animation: transition linear infinite;
+	animation-duration: 20s;
+	animation-delay: 5s;
+}
+@keyframes transition {
+	20%,60% {
+		opacity: 1;
+}
+	70%,100% {
+		opacity: 0;
+}
+}
 /* ----- END HEADER ----- */
 
 /* ----- TEAMS ----- */
